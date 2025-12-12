@@ -99,14 +99,16 @@ module scr1_tb_log_cmd();
         (scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[14 : 12] == 3'b000)        // funct3 for BEQ
       ) begin
         // detect BEQ command
-        $display("Detect BEQ command! Opcode: %b; RD: %b, Funct3: %b, RS1: %b, RS2: %b, Funct:7 %b", 
-          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[6:0], 
-          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[11:7], 
-          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[14:12], 
-          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[19:15], 
-          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[24:20], 
-          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[31:25]
-          );
+        $display("BEQ: opcode=%b funct3=%b rs1=%b rs2=%b imm[12]=%b imm[11]=%b imm[10:5]=%b imm[4:1]=%b (imm[0]=0)",
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[6:0],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[14:12],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[19:15],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[24:20],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[31],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[7],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[30:25],
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[11:8],
+        );
       end
     end
   end
@@ -121,27 +123,27 @@ endmodule
 ```
 scr1_top_tb_ahb
 [0;34m---Test:                          beq.hex[0m
-Detect BEQ command! Opcode: 1100011; RD: 11010, Funct3: 000, RS1: 00101, RS2: 00000, Funct:7 0000000
-Detect BEQ command! Opcode: 1100011; RD: 01100, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000000
-Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
-Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
-Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000000
-Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
-Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
-Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000000
-Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
-Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
-Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0001000
-Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0001000
-Detect BEQ command! Opcode: 1100011; RD: 11000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000111
-Detect BEQ command! Opcode: 1100011; RD: 11000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000111
-Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000100
-Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000100
-Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000011
-Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000011
-Detect BEQ command! Opcode: 1100011; RD: 01100, Funct3: 000, RS1: 00000, RS2: 00000, Funct:7 0000000
-Detect BEQ command! Opcode: 1100011; RD: 01100, Funct3: 000, RS1: 00000, RS2: 00000, Funct:7 0000000
-Detect BEQ command! Opcode: 1100011; RD: 11110, Funct3: 000, RS1: 01110, RS2: 01111, Funct:7 0000000
+BEQ: opcode=1100011 funct3=000 rs1=00101 rs2=00000 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=1101 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=0110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=1 imm[11]=1 imm[10:5]=111111 imm[4:1]=1110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=1 imm[11]=1 imm[10:5]=111111 imm[4:1]=1110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=0100 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=1 imm[11]=1 imm[10:5]=111111 imm[4:1]=1110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=1 imm[11]=1 imm[10:5]=111111 imm[4:1]=1110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=0100 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=1 imm[11]=1 imm[10:5]=111111 imm[4:1]=1110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=1 imm[11]=1 imm[10:5]=111111 imm[4:1]=1110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=001000 imm[4:1]=1000 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=001000 imm[4:1]=1000 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000111 imm[4:1]=1100 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000111 imm[4:1]=1100 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000100 imm[4:1]=0100 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000100 imm[4:1]=0100 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000011 imm[4:1]=1000 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00001 rs2=00010 imm[12]=0 imm[11]=0 imm[10:5]=000011 imm[4:1]=1000 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00000 rs2=00000 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=0110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=00000 rs2=00000 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=0110 (imm[0]=0) 
+BEQ: opcode=1100011 funct3=000 rs1=01110 rs2=01111 imm[12]=0 imm[11]=0 imm[10:5]=000000 imm[4:1]=1111 (imm[0]=0) 
 [0;32mTest passed[0m
 
 #--------------------------------------
