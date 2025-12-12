@@ -1,0 +1,95 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Fri Dec 12 21:59:03 2025
+[*]
+[dumpfile] "/mnt/c/Users/User/Downloads/lab_scr1/build/verilator_wf_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_1/simx.vcd"
+[dumpfile_mtime] "Fri Dec 12 15:16:56 2025"
+[dumpfile_size] 901511
+[savefile] "/mnt/c/Users/User/Downloads/lab_scr1/build/verilator_wf_AHB_MAX_imc_IPIC_1_TCM_1_VIRQ_1_TRACE_1/my_wave.gtkw"
+[timestart] 552
+[size] 1920 983
+[pos] -27 -24
+*-3.107907 562 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.scr1_top_tb_ahb.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_dm.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_lsu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_hdu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_hdu.hart_runctrl.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ipic.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_tdu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_tracelog.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_scu.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_scu.i_hdu_rstn_qlfy_adapter_cell_sync.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_scu.i_sys_rstn_qlfy_adapter_cell_sync.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_core_top.i_tapc.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_dmem_ahb.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_imem_ahb.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_tcm.
+[treeopen] TOP.scr1_top_tb_ahb.i_top.i_tcm.i_dp_memory.
+[sst_width] 297
+[signals_width] 243
+[sst_expanded] 1
+[sst_vpaned_height] 539
+@28
+TOP.clk
+TOP.scr1_top_tb_ahb.rst_n
+@23
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.curr_pc[31:0]
+@22
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.new_pc[31:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.exu2ifu_pc_new_o[31:0]
+@28
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.exu2ifu_pc_new_req_o
+@200
+-Fetch
+@22
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_ifu.ifu2imem_addr_o[31:0]
+@28
+TOP.scr1_top_tb_ahb.i_top.i_tcm.imem_req
+TOP.scr1_top_tb_ahb.i_top.i_tcm.imem_resp[1:0]
+@22
+TOP.scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[31:0]
+@28
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.ifu2idu_vd_i
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2ifu_rdy_o
+@200
+-Decode
+@28
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.ifu2idu_vd_i
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2ifu_rdy_o
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_req_o
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.exu2idu_rdy_i
+@22
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.ifu2idu_instr_i[31:0]
+@28
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.funct3[2:0]
+@22
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.funct7[6:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.funct12[11:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.rs1_addr[4:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.rs2_addr[4:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.rd_addr[4:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.imm[31:0]
+@28
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.branch_req
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.jump_req
+@22
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.idu2exu_cmd_o.lsu_cmd[3:0]
+@200
+-exicution
+@22
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_addr_op1[31:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_addr_op2[31:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_addr_res[31:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_main_op1[31:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_main_op2[31:0]
+TOP.scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.ialu_main_res[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

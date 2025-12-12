@@ -1,0 +1,30 @@
+scr1_top_tb_ahb
+[0;34m---Test:                          beq.hex[0m
+Detect BEQ command! Opcode: 1100011; RD: 11010, Funct3: 000, RS1: 00101, RS2: 00000, Funct:7 0000000
+Detect BEQ command! Opcode: 1100011; RD: 01100, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000000
+Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
+Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
+Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000000
+Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
+Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
+Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000000
+Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
+Detect BEQ command! Opcode: 1100011; RD: 11101, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 1111111
+Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0001000
+Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0001000
+Detect BEQ command! Opcode: 1100011; RD: 11000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000111
+Detect BEQ command! Opcode: 1100011; RD: 11000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000111
+Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000100
+Detect BEQ command! Opcode: 1100011; RD: 01000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000100
+Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000011
+Detect BEQ command! Opcode: 1100011; RD: 10000, Funct3: 000, RS1: 00001, RS2: 00010, Funct:7 0000011
+Detect BEQ command! Opcode: 1100011; RD: 01100, Funct3: 000, RS1: 00000, RS2: 00000, Funct:7 0000000
+Detect BEQ command! Opcode: 1100011; RD: 01100, Funct3: 000, RS1: 00000, RS2: 00000, Funct:7 0000000
+Detect BEQ command! Opcode: 1100011; RD: 11110, Funct3: 000, RS1: 01110, RS2: 01111, Funct:7 0000000
+[0;32mTest passed[0m
+
+#--------------------------------------
+# Summary: 1/1 tests passed
+#--------------------------------------
+
+- /mnt/c/Users/User/Downloads/lab_scr1/src/tb/scr1_top_tb_runtests.sv:199: Verilog $finish

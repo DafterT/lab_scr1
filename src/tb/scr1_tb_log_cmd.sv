@@ -8,7 +8,14 @@ module scr1_tb_log_cmd();
         (scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[14 : 12] == 3'b000)        // funct3 for BEQ
       ) begin
         // detect BEQ command
-        $display("Detect BEQ command");
+        $display("Detect BEQ command! Opcode: %b; RD: %b, Funct3: %b, RS1: %b, RS2: %b, Funct:7 %b", 
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[6:0], 
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[11:7], 
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[14:12], 
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[19:15], 
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[24:20], 
+          scr1_top_tb_ahb.i_top.i_imem_ahb.imem_rdata[31:25]
+          );
       end
     end
   end
